@@ -1,0 +1,395 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bp-navy-900: #0b1437;
+    --bp-navy-700: #1a2452;
+    --bp-navy-50: #f4f6fb;
+    --bp-magenta-600: #d1118c;
+    --bp-magenta-500: #e8359f;
+    --bp-magenta-50: #fdf2f8;
+    --bp-gold-400: #d4a574;
+    --bp-teal-600: #17a2b8;
+    --bp-yellow-500: #ffc820;
+    --bp-yellow-600: #e5b000;
+    --bp-cream: #fafaf7;
+    --bp-charcoal: #1a1a1a;
+    --bp-gray-600: #4b5563;
+    --bp-gray-300: #d1d5db;
+    --bp-success: #16a34a;
+    --bp-whatsapp: #25d366;
+
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-body antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-magenta-600;
+  }
+
+  ::selection {
+    @apply bg-magenta-600/20 text-navy-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold;
+  }
+}
+
+@layer components {
+  /* Typography Utilities */
+  .eyebrow {
+    @apply text-eyebrow uppercase text-navy-700 tracking-widest font-body;
+  }
+
+  .section-heading {
+    @apply font-display text-display-lg text-navy-900;
+  }
+
+  .section-subheading {
+    @apply text-body-lg text-gray-600 mt-3 max-w-2xl;
+  }
+
+  /* Container & Layout */
+  .container {
+    @apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+
+  .container-sm {
+    @apply max-w-4xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+
+  /* Premium Glass Morphism Cards */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-16 transition-all duration-300;
+  }
+
+  .glass-card-hover {
+    @apply glass-card hover:bg-white/15 hover:border-white/30 hover:shadow-hover;
+  }
+
+  /* Premium Cards */
+  .premium-card {
+    @apply bg-white border border-gray-200 rounded-16 shadow-card transition-all duration-300;
+  }
+
+  .premium-card-hover {
+    @apply premium-card hover:shadow-elevated hover:-translate-y-1 cursor-pointer;
+  }
+
+  /* Gradient Backgrounds */
+  .bg-gradient-navy {
+    @apply bg-gradient-navy-dark;
+  }
+
+
+  /* Border Radius System */
+  .rounded-4 {
+    @apply rounded;
+  }
+
+  .rounded-8 {
+    @apply rounded-lg;
+  }
+
+  .rounded-12 {
+    @apply rounded-xl;
+  }
+
+  .rounded-16 {
+    @apply rounded-2xl;
+  }
+
+  .rounded-20 {
+    border-radius: 20px;
+  }
+
+  .rounded-24 {
+    border-radius: 24px;
+  }
+
+  /* Shadow System */
+  /* native Tailwind box-shadow utilities are used directly from tailwind.config.ts */
+
+  /* Glow Effects */
+  .glow-magenta {
+    @apply shadow-glow;
+  }
+
+  .glow-teal {
+    @apply shadow-glow-teal;
+  }
+
+  /* Premium Buttons Base */
+  .btn-base {
+    @apply inline-flex items-center justify-center gap-2 font-semibold rounded-12 transition-all duration-200 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  .btn-sm {
+    @apply btn-base h-10 px-4 text-sm;
+  }
+
+  .btn-md {
+    @apply btn-base h-12 px-6 text-base;
+  }
+
+  .btn-lg {
+    @apply btn-base h-13 px-8 text-base;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-gold text-white shadow-premium hover:shadow-hover hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-navy-900 text-white hover:bg-navy-700 active:scale-95;
+  }
+
+  .btn-accent {
+    @apply bg-gradient-magenta text-white shadow-premium hover:shadow-hover active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-navy-900 text-navy-900 hover:bg-navy-50 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply text-navy-700 hover:text-navy-900 hover:underline;
+  }
+
+  .btn-whatsapp {
+    @apply bg-whatsapp text-white hover:opacity-90 shadow-premium active:scale-95;
+  }
+
+  /* Form Input Premium */
+  .input-premium {
+    @apply w-full px-4 py-3 border-1.5 border-gray-300 rounded-12 font-body text-base text-navy-900 outline-none transition-all duration-200 placeholder:text-gray-600 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 focus:bg-white;
+  }
+
+  .input-premium.error {
+    @apply border-red-500 focus:border-red-500 focus:ring-red-500/20;
+  }
+
+  /* native Tailwind font-size utilities are used directly from tailwind.config.ts */
+
+  /* Grid Utilities */
+  .grid-3 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
+  }
+
+  .grid-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8;
+  }
+
+  .grid-4 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8;
+  }
+
+  /* Badge System */
+  .badge {
+    @apply inline-block px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .badge-navy {
+    @apply badge bg-navy-50 text-navy-700;
+  }
+
+  .badge-magenta {
+    @apply badge bg-magenta-50 text-magenta-600;
+  }
+
+  .badge-gold {
+    @apply badge bg-yellow-50 text-gold-400;
+  }
+
+  .badge-success {
+    @apply badge bg-green-50 text-green-600;
+  }
+
+  /* Divider */
+  .divider {
+    @apply h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent;
+  }
+
+  /* Responsive Grid */
+  .responsive-grid {
+    @apply grid gap-6 md:gap-8;
+  }
+
+  /* native Tailwind object-fit utilities are used directly */
+
+  /* Accessibility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /* native Tailwind will-change utilities are used directly */
+
+  .transform-gpu {
+    @apply transform;
+  }
+
+  /* Utility Classes for Premium Spacing */
+  .px-safe {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+@layer utilities {
+  /* Translate Utilities */
+  .-translate-y-0\.5 {
+    --tw-translate-y: -0.125rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .translate-z-0 {
+    transform: translateZ(0);
+  }
+
+  /* Custom Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(209, 17, 140, 0.15);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(209, 17, 140, 0.25);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .animate-fade-in-down {
+    animation: fadeInDown 0.6s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInFromLeft 0.6s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInFromRight 0.6s ease-out;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Loading Skeleton */
+  .skeleton {
+    @apply bg-gray-200 animate-pulse rounded-8;
+  }
+
+  /* Smooth Transitions */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .transition-smooth-fast {
+    @apply transition-all duration-200 ease-out;
+  }
+
+  .transition-smooth-slow {
+    @apply transition-all duration-500 ease-out;
+  }
+}
