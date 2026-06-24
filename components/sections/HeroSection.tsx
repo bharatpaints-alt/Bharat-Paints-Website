@@ -84,7 +84,7 @@ export function HeroSection() {
             variants={itemVariants}
             className="text-lg md:text-body-lg text-white/90 mb-8 max-w-2xl mx-auto"
           >
-            500+ homes painted. 50+ commercial projects. AI-powered consultation.
+            10,000+ homes transformed. 200+ rice mills coated. 100+ projects pan India.
             Guaranteed quality with warranty since 1976.
           </motion.p>
 
@@ -93,9 +93,9 @@ export function HeroSection() {
             variants={itemVariants}
             className="grid grid-cols-3 gap-6 md:gap-12 mb-8 max-w-lg mx-auto py-8"
           >
-            <TrustMetric number="500+" label="Homes Painted" />
-            <TrustMetric number="50+" label="Projects" />
-            <TrustMetric number="48" label="Years" />
+            <TrustMetric number="10,000+" label="Homes Transformed" />
+            <TrustMetric number="200+" label="Rice Mills" />
+            <TrustMetric number="100+" label="Projects Pan India" />
           </motion.div>
 
           {/* CTAs */}

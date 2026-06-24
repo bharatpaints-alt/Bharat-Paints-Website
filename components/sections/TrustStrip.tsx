@@ -11,13 +11,13 @@ const trustItems = [
   },
   {
     icon: Users,
-    stat: "500+",
-    label: "Happy Customers",
+    stat: "10,000+",
+    label: "Homes Transformed",
   },
   {
     icon: Building2,
-    stat: "50+",
-    label: "Major Projects",
+    stat: "200+",
+    label: "Rice Mills Coated",
   },
   {
     icon: Clock,

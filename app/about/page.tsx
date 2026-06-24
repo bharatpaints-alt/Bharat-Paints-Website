@@ -41,8 +41,9 @@ export default function AboutPage() {
             Our Coverage
           </h2>
           <p className="text-body-lg text-gray-700 mb-6">
-            <strong>500+ homes painted</strong> — From 2BHK apartments to sprawling villas<br/>
-            <strong>50+ factories & commercial spaces</strong> — Epoxy floors, machinery coatings, warehouse finishes<br/>
+            <strong>10,000+ homes transformed</strong> — From 2BHK apartments to sprawling villas<br/>
+            <strong>200+ rice mills & industrial facilities</strong> — Epoxy floors, machinery coatings, warehouse finishes<br/>
+            <strong>100+ projects pan India</strong> — Commercial, institutional, and large-scale industrial work<br/>
             <strong>Entire Karnal region</strong> — Home visits within 24 hours
           </p>
 
