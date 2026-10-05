@@ -52,8 +52,8 @@ export default function AboutPage() {
           </h2>
           <p className="text-body-lg text-gray-700 mb-6">
             <strong>Address:</strong> SCO 30, Bhagat Singh Market, Railway Road, Karnal 132001<br/>
-            <strong>Phone:</strong> +91 9896 221004<br/>
-            <strong>Hours:</strong> Mon–Sat: 9:30 AM – 7:30 PM | Sunday: Closed<br/>
+            <strong>Phone:</strong> +91 93558 60009<br/>
+            <strong>Hours:</strong> Mon–Sat: 9:30 AM – 6:30 PM | Sunday: Closed<br/>
             <strong>WhatsApp:</strong> Available 24/7 for emergencies
           </p>
         </div>
