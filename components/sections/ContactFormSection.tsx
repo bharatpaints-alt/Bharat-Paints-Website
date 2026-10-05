@@ -30,22 +30,22 @@ export function ContactFormSection() {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-    reset,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = async (data: ContactFormData) => {
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      console.log("Form submitted:", data);
-      setSubmitted(true);
-      reset();
-      setTimeout(() => setSubmitted(false), 5000);
-    } catch (error) {
-      console.error("Error:", error);
-    }
+  const onSubmit = (data: ContactFormData) => {
+    const message = [
+      "Hello Bharat Paints, I would like a quote.",
+      `Name: ${data.name}`,
+      `Mobile: ${data.phone}`,
+      `Location: ${data.location}`,
+      `Property: ${data.propertyType}`,
+      `Customer: ${data.customerType}`,
+      `Requirement: ${data.requirement}`,
+    ].join("\n");
+    window.open(`https://wa.me/919355860009?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+    setSubmitted(true);
   };
 
   return (
@@ -59,7 +59,7 @@ export function ContactFormSection() {
         >
           <h2 className="section-heading">Get Your Free Quote</h2>
           <p className="section-subheading">
-            Tell us about your project, and we&apos;ll provide an expert estimate
+            Tell us about your project. Send your details to our team on WhatsApp.
           </p>
         </motion.div>
 
@@ -72,10 +72,11 @@ export function ContactFormSection() {
         >
           {/* Name */}
           <motion.div className="mb-6" whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-            <label className="block text-sm font-semibold text-navy-900 mb-2">
+            <label htmlFor="quote-name" className="block text-sm font-semibold text-navy-900 mb-2">
               Full Name *
             </label>
             <input
+              id="quote-name"
               {...register("name")}
               type="text"
               className="input-premium"
@@ -89,10 +90,11 @@ export function ContactFormSection() {
 
           {/* Phone */}
           <motion.div className="mb-6" whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-            <label className="block text-sm font-semibold text-navy-900 mb-2">
+            <label htmlFor="quote-phone" className="block text-sm font-semibold text-navy-900 mb-2">
               Phone Number *
             </label>
             <input
+              id="quote-phone"
               {...register("phone")}
               type="tel"
               className="input-premium"
@@ -106,10 +108,11 @@ export function ContactFormSection() {
 
           {/* Location */}
           <motion.div className="mb-6" whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-            <label className="block text-sm font-semibold text-navy-900 mb-2">
+            <label htmlFor="quote-location" className="block text-sm font-semibold text-navy-900 mb-2">
               Location *
             </label>
             <input
+              id="quote-location"
               {...register("location")}
               type="text"
               className="input-premium"
@@ -123,10 +126,11 @@ export function ContactFormSection() {
 
           {/* Property Type */}
           <motion.div className="mb-6" whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-            <label className="block text-sm font-semibold text-navy-900 mb-2">
+            <label htmlFor="quote-propertyType" className="block text-sm font-semibold text-navy-900 mb-2">
               Property Type *
             </label>
             <select
+              id="quote-propertyType"
               {...register("propertyType")}
               className="input-premium appearance-none cursor-pointer"
               disabled={isSubmitting}
@@ -147,10 +151,11 @@ export function ContactFormSection() {
 
           {/* Customer Type */}
           <motion.div className="mb-6" whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-            <label className="block text-sm font-semibold text-navy-900 mb-2">
+            <label htmlFor="quote-customerType" className="block text-sm font-semibold text-navy-900 mb-2">
               I am a *
             </label>
             <select
+              id="quote-customerType"
               {...register("customerType")}
               className="input-premium appearance-none cursor-pointer"
               disabled={isSubmitting}
@@ -171,10 +176,11 @@ export function ContactFormSection() {
 
           {/* Requirement */}
           <motion.div className="mb-8" whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-            <label className="block text-sm font-semibold text-navy-900 mb-2">
+            <label htmlFor="quote-requirement" className="block text-sm font-semibold text-navy-900 mb-2">
               Project Details *
             </label>
             <textarea
+              id="quote-requirement"
               {...register("requirement")}
               className="input-premium resize-none h-24"
               placeholder="Tell us about your painting requirements..."
@@ -198,7 +204,7 @@ export function ContactFormSection() {
               disabled={isSubmitting}
               className="btn-lg btn-primary w-full"
             >
-              {isSubmitting ? "Submitting..." : "Get Free Quote"}
+              {isSubmitting ? "Opening WhatsApp..." : "Continue on WhatsApp"}
             </Button>
           </motion.div>
 
@@ -213,9 +219,9 @@ export function ContactFormSection() {
               >
                 <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
                 <div>
-                  <p className="font-semibold text-green-900">Quote Request Sent!</p>
+                  <p className="font-semibold text-green-900">Your WhatsApp message is ready</p>
                   <p className="text-sm text-green-700">
-                    We&apos;ll contact you soon with your free estimate.
+                    Tap Send in WhatsApp to deliver your request. If WhatsApp did not open, use the chat link below.
                   </p>
                 </div>
               </motion.div>
@@ -233,7 +239,7 @@ export function ContactFormSection() {
           <p className="text-gray-600 mb-4">Prefer to chat directly?</p>
           <Button
             asLink
-            href="https://wa.me/919896221004"
+            href="https://wa.me/919355860009"
             target="_blank"
             className="btn-lg btn-whatsapp"
           >
