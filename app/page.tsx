@@ -5,7 +5,6 @@ import { BrandsSection } from "@/components/sections/BrandsSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { AIPaintExpertSection } from "@/components/sections/AIPaintExpertSection";
 import { ProjectsGallerySection } from "@/components/sections/ProjectsGallerySection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ContactFormSection } from "@/components/sections/ContactFormSection";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <ProcessSection />
       <AIPaintExpertSection />
       <ProjectsGallerySection />
-      <TestimonialsSection />
       <ContactFormSection />
     </>
   );
