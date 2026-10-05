@@ -12,10 +12,10 @@ export function Footer() {
               Karnal's trusted paint expert since 1976.
             </p>
             <p className="text-white/70 text-sm">
-              <strong>Address:</strong> SCO 30, Railway Road, Karnal 132001
+              <strong>Address:</strong> SCO 30, Bhagat Singh Market, Railway Road, Karnal – 132001
             </p>
             <p className="text-white/70 text-sm mt-2">
-              <strong>Hours:</strong> Mon–Sat: 9:30 AM – 7:30 PM
+              <strong>Hours:</strong> Mon–Sat: 9:30 AM – 6:30 PM
             </p>
           </div>
 
@@ -94,13 +94,15 @@ export function Footer() {
         {/* Divider */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/70">
-            <p>&copy; 2025 Bharat Paints. All rights reserved.</p>
-            <div className="flex gap-6">
-              <a href="https://wa.me/919896221004" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+            <p>&copy; 2026 Bharat Paints. All rights reserved.</p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <a href="https://giopaints.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">GIO Paints</a>
+              <a href="https://www.instagram.com/Bharatpaints_1976/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Instagram</a>
+              <a href="https://wa.me/919355860009" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
                 WhatsApp
               </a>
-              <a href="tel:+919896221004" className="hover:text-white transition">
-                Call: +91 9896 221004
+              <a href="tel:+919355860009" className="hover:text-white transition">
+                Call: +91 93558 60009
               </a>
             </div>
           </div>
