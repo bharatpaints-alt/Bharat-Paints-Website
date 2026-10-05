@@ -66,7 +66,7 @@ export function Button({
 
   if (asLink) {
     return (
-      <Link href={href} className={combinedClasses} target={target} rel={rel}>
+      <Link href={href} className={combinedClasses} target={target} rel={rel ?? (target === "_blank" ? "noopener noreferrer" : undefined)} onClick={onClick}>
         {children}
       </Link>
     );
