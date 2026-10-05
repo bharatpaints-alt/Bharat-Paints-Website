@@ -27,7 +27,7 @@ const itemVariants = {
 
 export function HeroSection() {
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-gradient-navy-dark">
+    <section className="relative w-full min-h-[calc(100svh-5rem)] py-16 md:py-20 overflow-hidden bg-gradient-navy-dark">
       {/* Animated Background Pattern */}
       <motion.div
         className="absolute inset-0 opacity-10"
@@ -54,7 +54,7 @@ export function HeroSection() {
       </div>
 
       {/* Hero Content */}
-      <div className="relative h-full flex flex-col items-center justify-center text-center px-4 md:px-6">
+      <div className="relative flex flex-col items-center justify-center text-center px-4 md:px-6">
         <motion.div
           variants={containerVariants}
           initial="hidden"
