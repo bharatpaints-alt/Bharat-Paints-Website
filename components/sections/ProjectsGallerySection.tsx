@@ -6,21 +6,21 @@ import Image from "next/image";
 const projects = [
   {
     id: "1",
-    title: "Modern Home Interior",
+    title: "Inside Bharat Paints",
     image: "/Bharat_Paints_Instore_pics_1.webp",
-    category: "Interior",
+    category: "Showroom",
   },
   {
     id: "2",
-    title: "Commercial Space",
+    title: "Our Product Range",
     image: "/Bharat_Paints_Instore_pics_2.webp",
-    category: "Commercial",
+    category: "Showroom",
   },
   {
     id: "3",
-    title: "Premium Finish",
+    title: "Explore Our Showroom",
     image: "/Bharat_Paints_Instore_pics_3.webp",
-    category: "Interior",
+    category: "Showroom",
   },
 ];
 
@@ -54,9 +54,9 @@ export function ProjectsGallerySection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="section-heading">Our Projects</h2>
+          <h2 className="section-heading">Visit Our Showroom</h2>
           <p className="section-subheading">
-            See the transformations we&apos;ve created
+            A look inside Bharat Paints, Railway Road, Karnal
           </p>
         </motion.div>
 
