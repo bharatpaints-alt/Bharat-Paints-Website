@@ -67,7 +67,7 @@ export default function PrivacyPage() {
               5. Your Rights
             </h2>
             <p>
-              You have the right to access, correct, or delete your personal information. Contact us at +91 9896 221004 to exercise these rights.
+              You have the right to access, correct, or delete your personal information. Contact us at +91 93558 60009 to exercise these rights.
             </p>
           </div>
 
@@ -81,8 +81,8 @@ export default function PrivacyPage() {
             <p>
               <strong>Bharat Paints</strong><br/>
               SCO 30, Railway Road, Karnal 132001<br/>
-              Phone: +91 9896 221004<br/>
-              Email: contact@bharatpaints.com
+              Phone: +91 93558 60009<br/>
+              Email: bharatpaints@gmail.com
             </p>
           </div>
 
