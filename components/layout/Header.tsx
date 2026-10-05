@@ -88,6 +88,8 @@ export function Header() {
           onClick={() => setIsOpen(!isOpen)}
           className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
           aria-label="Toggle menu"
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </motion.button>
@@ -97,6 +99,7 @@ export function Header() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-navigation"
             variants={menuVariants}
             initial="hidden"
             animate="visible"
